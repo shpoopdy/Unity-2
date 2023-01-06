@@ -596,5 +596,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rocket
       objectReference: {fileID: 0}
+    - target: {fileID: 8200674356341445206, guid: c91f16ccaebdc834e95b621fc6a9e920, type: 3}
+      propertyPath: mainEngine
+      value: 
+      objectReference: {fileID: 8300000, guid: da91e84281674ea4b962c7f7321914d5, type: 3}
+    - target: {fileID: 8200674356341445216, guid: c91f16ccaebdc834e95b621fc6a9e920, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c91f16ccaebdc834e95b621fc6a9e920, type: 3}
