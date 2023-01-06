@@ -413,10 +413,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandingPad
       objectReference: {fileID: 0}
-    - target: {fileID: 3281399777092245293, guid: bbfc7375ff9ee0742b57d413a32d040e, type: 3}
-      propertyPath: m_TagString
-      value: Finished
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbfc7375ff9ee0742b57d413a32d040e, type: 3}
 --- !u!1001 &3566292118842383440
@@ -429,10 +425,6 @@ PrefabInstance:
     - target: {fileID: 3240543294036915607, guid: 04a82720893a2fb40a93b7c31f46b7dd, type: 3}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 3240543294036915607, guid: 04a82720893a2fb40a93b7c31f46b7dd, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 3.7434094
       objectReference: {fileID: 0}
     - target: {fileID: 3240543294036915607, guid: 04a82720893a2fb40a93b7c31f46b7dd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -474,10 +466,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7577576704079397346, guid: 04a82720893a2fb40a93b7c31f46b7dd, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3c933a8ae3dca164bb05a344bfb0a26c, type: 2}
     - target: {fileID: 7910337155481291442, guid: 04a82720893a2fb40a93b7c31f46b7dd, type: 3}
       propertyPath: m_Name
       value: BigChung
@@ -494,10 +482,6 @@ PrefabInstance:
     - target: {fileID: 883335181914753231, guid: 807c756c356314445a9f06d068219ddd, type: 3}
       propertyPath: m_Name
       value: LaunchPad
-      objectReference: {fileID: 0}
-    - target: {fileID: 883335181914753231, guid: 807c756c356314445a9f06d068219ddd, type: 3}
-      propertyPath: m_TagString
-      value: Friendly
       objectReference: {fileID: 0}
     - target: {fileID: 902643897800668671, guid: 807c756c356314445a9f06d068219ddd, type: 3}
       propertyPath: m_RootOrder
