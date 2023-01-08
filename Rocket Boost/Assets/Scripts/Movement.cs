@@ -19,34 +19,40 @@ public class Movement : MonoBehaviour
   Rigidbody rb;
   AudioSource audioSource;
   
-  void Start()
-  {
+  void Start() {
     rb = GetComponent<Rigidbody>();
     audioSource = GetComponent<AudioSource>();
   }
 
   // Update is called once per frame
-  void Update()
-  {
+  void Update() {
       ProcessThrust();
       ProcessRotation();
   }
 
   void ProcessThrust() {
     if (Input.GetKey(KeyCode.Space)) {
-      rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
-      if (!audioSource.isPlaying) {
-        audioSource.PlayOneShot(mainEngine);
-      }
-      if(!leftEngineParticles.isPlaying && !rightEngineParticles.isPlaying) {
-        leftEngineParticles.Play();
-        rightEngineParticles.Play();
-      }
+      StartThrusting();
     } else {
-        audioSource.Stop();
-        leftEngineParticles.Stop();
-        rightEngineParticles.Stop();
-      }
+      StopThrusting();
+    }
+  }
+
+  void StartThrusting() {
+    rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+    if (!audioSource.isPlaying) {
+      audioSource.PlayOneShot(mainEngine);
+    }
+    if (!leftEngineParticles.isPlaying && !rightEngineParticles.isPlaying) {
+      leftEngineParticles.Play();
+      rightEngineParticles.Play();
+    }
+  }
+
+  void StopThrusting() {
+    audioSource.Stop();
+    leftEngineParticles.Stop();
+    rightEngineParticles.Stop();
   }
 
   void ProcessRotation() {

@@ -13,14 +13,19 @@ public class CollisionHandler : MonoBehaviour
   AudioSource audioSource;
 
   bool isTransitioning = false;
+  bool collisionDisabled = false;
 
   void Start() {
     audioSource = GetComponent<AudioSource>();
   }
 
+  void Update() {
+    DebugKeys();
+  }
+
   void OnCollisionEnter(Collision other) {
 
-    if (isTransitioning) return;
+    if (isTransitioning || collisionDisabled) return;
 
     switch(other.gameObject.tag) {
       case "Friendly":
@@ -67,5 +72,14 @@ public class CollisionHandler : MonoBehaviour
       nextSceneIndex = 0;
     }
     SceneManager.LoadScene(nextSceneIndex);
+  }
+
+  void DebugKeys() {
+    if (Input.GetKeyDown(KeyCode.L)) {
+      LoadNextLevel();
+    } else if (Input.GetKeyDown(KeyCode.C)) {
+      collisionDisabled = !collisionDisabled; //Toggle
+    }
+
   }
 }
