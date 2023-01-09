@@ -18,7 +18,7 @@ public class Oscillator : MonoBehaviour
     
   void Update() {
     //To make sure it isn't 0, but yeah.
-    if (period <= Matf.Epsilon) {
+    if (period <= Mathf.Epsilon) {
       return;
     }
     float cycles = Time.time / period;
