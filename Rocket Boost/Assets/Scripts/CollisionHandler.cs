@@ -11,6 +11,7 @@ public class CollisionHandler : MonoBehaviour
   [SerializeField] ParticleSystem successParticles;
 
   AudioSource audioSource;
+  float volumeLevel = 0.2f;
 
   bool isTransitioning = false;
   bool collisionDisabled = false;
@@ -44,15 +45,18 @@ public class CollisionHandler : MonoBehaviour
     crashParticles.Play();
     isTransitioning = true;
     audioSource.Stop();
+    audioSource.volume = volumeLevel;
     audioSource.PlayOneShot(crash);
     GetComponent<Movement>().enabled = false;
     Invoke("ReloadLevel", levelLoadDelay);
   }
 
+  //TODO: Remember to include the third level at some point, please
   void NextLevelSequence() {
     successParticles.Play();
     isTransitioning = true;
     audioSource.Stop();
+    audioSource.volume = volumeLevel;
     audioSource.PlayOneShot(success);
     GetComponent<Movement>().enabled = false;
     Invoke("LoadNextLevel", levelLoadDelay);
