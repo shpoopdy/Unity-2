@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+ //TODO: Remember to include the third level at some point, look at 'Build Settings'
+
 public class CollisionHandler : MonoBehaviour
 {
   [SerializeField] float levelLoadDelay = 1f;
@@ -51,7 +53,6 @@ public class CollisionHandler : MonoBehaviour
     Invoke("ReloadLevel", levelLoadDelay);
   }
 
-  //TODO: Remember to include the third level at some point, please
   void NextLevelSequence() {
     successParticles.Play();
     isTransitioning = true;
