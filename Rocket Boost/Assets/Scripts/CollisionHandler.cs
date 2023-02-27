@@ -23,7 +23,7 @@ public class CollisionHandler : MonoBehaviour
   }
 
   void Update() {
-    DebugKeys();
+    
   }
 
   void OnCollisionEnter(Collision other) {
