@@ -1,2 +1,1 @@
-# Unity-2
-## Rocket Game
+# Rocket Game
